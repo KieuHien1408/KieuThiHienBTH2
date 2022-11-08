@@ -1,0 +1,31 @@
+@model KieuThiHienBTH2.Models.Customer
+<h1>Tạo mới 1 khách hàng</h1>
+<hr>
+<div class="row">
+    <div class="col-md-3">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CustomerID" class="control-label"></label>
+                <input asp-for="CustomerID" class="form-control">
+                <span asp-validation-for="CustomerID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerName" class="control-label"></label>
+                <input asp-for="CustomerName" class="form-control">
+                <span asp-validation-for="CustomerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerAddress" class="control-label"></label>
+                <input asp-for="CustomerAddress" class="form-control">
+                <span asp-validation-for="CustomerAddress" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Save">
+                <a class="btn btn-success" asp-action="Index">Danh sách khách hàng</a>
+            </div>
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,22 @@
+@model KieuThiHienBTH2.Models.Employee
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Bạn có muốn xóa thông tin sinh viên</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmployeeName):
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(moldel => Model.EmployeeName)
+        </dd>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="EmployeeID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a class="btn btn-success" asp-action="Index">Danh sách sinh viên</a>
+    </form>
+</div>
